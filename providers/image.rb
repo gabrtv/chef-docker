@@ -156,7 +156,7 @@ def insert
 end
 
 def installed?
-  @current_resource.installed && tag_match
+  @current_resource.installed && tag_match && @current_resource.force != true
 end
 
 def load
